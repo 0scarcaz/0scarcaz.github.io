@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Cocontador | Lic. Oscar Cazares</title>
+  <meta name="description" content="Contabilidad y asesoría profesional por Lic. Oscar Cazares." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="neural"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio">
+      <img src="logo-el-cocontador.png" alt="El Cocontador" />
+      <span>El Cocontador</span>
+    </a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <img class="hero-logo" src="logo-el-cocontador.png" alt="Logo El Cocontador" />
+
+      <p class="eyebrow">Contabilidad y asesoría profesional</p>
+      <h1>Lic. Oscar Cazares</h1>
+      <p class="subtitle">
+        Servicios contables, fiscales y administrativos para personas físicas,
+        emprendedores y negocios.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/524625411961" target="_blank" rel="noopener">Contactar</a>
+        <a class="btn secondary" href="#servicios">Ver servicios</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <p class="eyebrow">Servicios</p>
+      <h2>Mis servicios</h2>
+
+      <div class="services">
+        <button class="service-card" type="button" aria-label="Ver detalles de contabilidad general">
+          <span class="card-inner">
+            <span class="card-face card-front">
+              <span class="icon">▧</span>
+              <h3>Contabilidad general</h3>
+              <p>Registro, control y organización de movimientos contables.</p>
+              <small>Click para ver más</small>
+            </span>
+            <span class="card-face card-back">
+              <h3>Incluye</h3>
+              <ul>
+                <li>Registro de ingresos y egresos</li>
+                <li>Conciliaciones y reportes básicos</li>
+                <li>Control documental contable</li>
+              </ul>
+            </span>
+          </span>
+        </button>
+
+        <button class="service-card" type="button" aria-label="Ver detalles de declaraciones fiscales">
+          <span class="card-inner">
+            <span class="card-face card-front">
+              <span class="icon">▤</span>
+              <h3>Declaraciones fiscales</h3>
+              <p>Apoyo con declaraciones mensuales, anuales e informativas.</p>
+              <small>Click para ver más</small>
+            </span>
+            <span class="card-face card-back">
+              <h3>Incluye</h3>
+              <ul>
+                <li>Declaraciones mensuales</li>
+                <li>Declaración anual</li>
+                <li>Revisión de obligaciones SAT</li>
+              </ul>
+            </span>
+          </span>
+        </button>
+
+        <button class="service-card" type="button" aria-label="Ver detalles de asesoría financiera">
+          <span class="card-inner">
+            <span class="card-face card-front">
+              <span class="icon">◔</span>
+              <h3>Asesoría financiera</h3>
+              <p>Orientación para tomar mejores decisiones con tus números.</p>
+              <small>Click para ver más</small>
+            </span>
+            <span class="card-face card-back">
+              <h3>Incluye</h3>
+              <ul>
+                <li>Análisis de gastos</li>
+                <li>Organización financiera</li>
+                <li>Recomendaciones prácticas</li>
+              </ul>
+            </span>
+          </span>
+        </button>
+
+        <button class="service-card" type="button" aria-label="Ver detalles de facturación CFDI">
+          <span class="card-inner">
+            <span class="card-face card-front">
+              <span class="icon">↗</span>
+              <h3>Facturación CFDI</h3>
+              <p>Emisión, cancelación, complementos y revisión de facturas.</p>
+              <small>Click para ver más</small>
+            </span>
+            <span class="card-face card-back">
+              <h3>Incluye</h3>
+              <ul>
+                <li>Emisión de facturas</li>
+                <li>Cancelaciones y complementos</li>
+                <li>Revisión de CFDI recibidos</li>
+              </ul>
+            </span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <p class="eyebrow">Contacto</p>
+      <h2>Agenda una asesoría</h2>
+      <p>Actualmente no contamos con oficinas presenciales pero contamos con servicio via whatsapp y correo electrónico.</p>
+
+      <div class="contact-grid">
+        <a href="tel:+524625411961">+52 4625411961</a>
+        <a href="mailto:oscarn.contact@gmail.com">oscarn.contact@gmail.com</a>
+        <span>Dirección pendiente</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> El Cocontador. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".service-card").forEach((card) => {
+      card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
